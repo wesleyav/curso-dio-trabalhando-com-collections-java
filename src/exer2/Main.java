@@ -29,6 +29,18 @@ public class Main {
 		Collections.sort(meusGatos);
 		System.out.println(meusGatos);
 
+		System.out.println("--\tOrdem Idade\t---");
+//		Collections.sort(meusGatos, new ComparatorIdade());
+		meusGatos.sort(new ComparatorIdade());
+		System.out.println(meusGatos);
+
+		System.out.println("--\tOrdem Cor\t---");
+		meusGatos.sort(new ComparatorCor());
+		System.out.println(meusGatos);
+
+		System.out.println("--\tOrdem Nome/Cor/Idade\t---");
+		meusGatos.sort(new ComparatorNomeCorIdade());
+		System.out.println(meusGatos);
 	}
 
 }
